@@ -45,17 +45,17 @@
         </ul>
       </li>
       <!-- starting visitors tap -->
-      <!-- <li class="treeview">
-        <a href="#"><i class="fa fa-child"></i> <span>Visitors</span>
+       <li class="treeview">
+        <a href="#"><i class="fa fa-child"></i> <span>Career</span>
           <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="./visitors.php?source=add_visitor">Add Visitor</a></li>
-          <li><a href="visitors.php">All Visitors</a></li>
+          <li><a href="./career.php?source=add_career">Add Career</a></li>
+          <li><a href="career.php">All Careers</a></li>
         </ul>
-      </li> -->
+      </li>
       <!-- starting visitors tap -->
      <!--  <li class="treeview">
         <a href="#"><i class="fa fa-clipboard"></i> <span>Attendance</span>
