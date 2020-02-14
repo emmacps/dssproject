@@ -1,12 +1,24 @@
+<?php if(!$session->is_signed_in()){
 
+    redirect("index.php");
+}
+
+?>
           <?php
 
           $message = "";
 
+          if(empty($_GET['id'])){
 
-          if(isset($_POST['create_career'])){
+            redirect("career.php");
 
-           $careers = new Career();
+          }else{
+
+          $careers = Career::find_by_id($_GET['id']);
+
+          if(isset($_POST['update_career'])){
+
+           if($careers){
 
           $careers->school = $_POST['school'];
           $careers->programme = $_POST['programme'];
@@ -16,7 +28,7 @@
           if($careers->save()){
 
            $message = "<div class='alert alert-info' role='alert'>
-                        <b>New Career Added Successfully! <a href='career.php'>View All</a> </b>
+                        <b>New Career Edited Successfully! <a href='career.php'>View All</a> </b>
                        </div>";
 
           }else{
@@ -24,6 +36,10 @@
           }
 
           }
+
+      }
+
+    }
 
            ?>
 
@@ -40,25 +56,27 @@
                     <div class="form-row">
                        <div class="form-group col-md-6">
                          <label for="">School Name:</label>
-                         <input type="text" class="form-control" name="school" required>
+                         <input type="text" class="form-control" name="school" value="<?php echo $careers->school; ?>" required>
                        </div>
                        <div class="form-group col-md-6">
                          <label for="">Programme to study:</label>
-                         <input type="text" class="form-control" name="programme" required>
+                         <input type="text" class="form-control" name="programme" value="<?php echo $careers->programme ?>" required>
                        </div>
                       <div class="form-group col-md-6">
                           <label for="">Programme Description:</label>
-                          <textarea name="description" class="form-control" rows="8" cols="80"></textarea>
+                          <textarea name="description" class="form-control" rows="8" cols="80">
+                            <?php echo $careers->description ?>
+                          </textarea>
                      </div>
 
                         <div class="form-group col-md-6">
                          <label for="">Careers:</label>
-                         <input type="text" class="form-control" name="careers" autocomplete="yes" required>
+                         <input type="text" class="form-control" name="careers" autocomplete="yes" value="<?php echo $careers->careers ?>" required>
                        </div>
 
 
                     <div class="form-group col-md-12">
-                       <input type="submit" class="btn btn-primary" name="create_career" value="Add">
+                       <input type="submit" class="btn btn-primary" name="update_career" value="Update">
                     </div>
 
 

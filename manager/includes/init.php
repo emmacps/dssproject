@@ -11,7 +11,7 @@ require_once("db_config.php");
 require_once("database.php");
 require_once("db_object.php");
 require_once("classes/user.php");
-// require_once("classes/staff.php");
+ require_once("classes/career.php");
 require_once("classes/school.php");
  require_once("classes/session.php");
 // require_once("classes/service.php");

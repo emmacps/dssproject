@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 21, 2019 at 04:01 AM
--- Server version: 5.7.23
--- PHP Version: 7.1.22
+-- Generation Time: Feb 14, 2020 at 02:32 AM
+-- Server version: 5.7.19
+-- PHP Version: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,31 @@ SET time_zone = "+00:00";
 --
 -- Database: `dss`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `career`
+--
+
+DROP TABLE IF EXISTS `career`;
+CREATE TABLE IF NOT EXISTS `career` (
+  `id` int(9) NOT NULL AUTO_INCREMENT,
+  `school` text NOT NULL,
+  `programme` text NOT NULL,
+  `description` text NOT NULL,
+  `careers` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `career`
+--
+
+INSERT INTO `career` (`id`, `school`, `programme`, `description`, `careers`) VALUES
+(4, 'Central University', 'Engineering', '                            Study engineering                                                    ', 'auto, pilot, caption'),
+(3, 'Ashasi University', 'Business Administration', '                            Study engineering                                                    ', 'auto, pilot'),
+(5, 'Valley View University', 'Agric', '                            Do u want to become a doctor                          ', 'medical doctor');
 
 -- --------------------------------------------------------
 

@@ -36,8 +36,8 @@
                         include "includes/switches/add_career.php";
                             break;
 
-                        case 'edit_schools';
-                            include "includes/switches/edit_schools.php";
+                        case 'edit_career';
+                            include "includes/switches/edit_career.php";
                             break;
 
                         default: include "includes/switches/all_career.php";
