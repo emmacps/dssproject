@@ -1,3 +1,4 @@
+ <?php require_once "manager/includes/init.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,7 +54,7 @@
   <!-- Page Content -->
   <div class="container-fluid">
     <div class="jumbotron">
-      <h1 class="display-4">Career Advisor</h1>
+      <h1 class="display-4">Schools Result List</h1>
       <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
       <hr class="my-4">
     </div>
@@ -62,84 +63,97 @@
 
   <div class="container">
     <div class="row">
+      <div class="col-sm-12">
+        <p>summary</p>
+      </div>
+    </div>
+    <div class="row">
+      <?php
+      if(isset($_POST['career_submit'])){
+
+        $shsCourse = $_POST['shsCourse'];
+        $wassce = $_POST['wassce'];
+        $uni = $_POST['uni'];
+        $programme = $_POST['programme'];
+      }
+
+       ?>
       <!-- ending first col -->
       <div class="col-md-6">
         <div class="card mb-5">
-          <div class="card-header">
-            Secondary Schools
-          </div>
+          <div class="card-header">Performance</div>
           <div class="card-body">
-            <!-- <h5 class="card-title">School Bases on category</h5> -->
-            <form method="post" action="career-result.php">
-              <div class="form-group row">
-                <label for="" class="col-sm-6 col-form-label">Select your SHS Course</label>
-                <select class="form-control" name="shsCourse">
-                  <option value="">Select Course</option>
-                  <option value="Gen. Science">Gen. Science</option>
-                  <option value="Business">Business</option>
-                  <option value="Gen. Arts">Gen. Arts</option>
-                  <option value="Visula Arts">Visula Arts</option>
-                  <option value="Home Economics">Home Economics</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="" class="col-form-label">Total Aggregate Obtain from WASSCE/SSCE</label>
-                <div class="">
-                  <input type="text" class="form-control" name="wassce" required>
-                </div>
-              </div>
-              <div class="form-group ">
-                <label for="" class="col-form-label">Preferred University to study</label>
-                <div class="">
-                  <input type="text" class="form-control" name="uni" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="" class="col-form-label">Preferred Programme To Study</label>
-                <div class="">
-                  <input type="text" class="form-control" name="programme" required>
-                </div>
-              </div>
-              <!-- <p>Select additional best two subjects</p>
-              <p>Select first best subject</p>-->
-              <!-- <div class="form-group row">
-                <select class="form-control col-sm-6" name="subj1" required>
-                  <option value="">Select 1st BestSubject</option>
-                  <option value="French">French</option>
-                  <option value="BDT">BDT</option>
-                  <option value="ICT">ICT</option>
-                </select>
-                <div class="col-sm-6">
-                  <input type="text" class="form-control" name="subj1g" required>
-                </div>
-              </div> -->
-              <!-- <div class="form-group row">
-                <select class="form-control col-sm-6" name="subj2" required>
-                  <option value="">Select 2nd Subject</option>
-                  <option value="French">French</option>
-                  <option value="BDT">BDT</option>
-                  <option value="ICT">ICT</option>
-                </select>
-                <option class="" value=""></option>
-                <div class="col-sm-6">
-                  <input type="text" class="form-control" name="subj2g" required>
-                </div>
-              </div> -->
-              <div class="form-group row">
-                 <input type="submit" name="career_submit" value="Search" class="btn btn-primary mt-3">
-              </div>
-            </form>
+            <h5 class="card-title">Grade from mock results</h5>
+            <h4>SHS Course Studied: <?php echo $shsCourse; ?></h4>
+            <h4>Total Aggregate Obtain from WASSCE/SSCE: <?php echo $wassce ?></h4>
+            <h4>Preferred University to study: <?php echo $uni ?></h4>
+            <h4>Preferred Programme To Study: <?php echo $programme ?></h4>
           </div>
         </div>
       </div>
 
-       <!-- second col -->
       <div class="col-md-6">
+        <div class="card mb-5">
+          <div class="card-header">
+            Result List
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">School Bases on category</h5>
 
+          </div>
+        </div>
       </div>
+
     </div>
 
+    <!-- Schools results display -->
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>School</th>
+              <th>Programme</th>
+              <th>Description</th>
+              <th>Careers</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
 
+            if(isset($_POST['career_submit'])) {
+
+              $query = "SELECT * FROM career ORDER BY RAND() LIMIT 4";
+              $placement_query = mysqli_query($connection, $query);
+              if(!$placement_query){
+                die("Query Failed" . mysqli_error($connection));
+              }
+
+              $count = mysqli_num_rows($placement_query);
+               if($count === 0){
+                echo "no result";
+              }
+              else{
+
+                while($row = mysqli_fetch_assoc($placement_query)){
+                  $school = $row['school'];
+                  $programme = $row['programme'];
+                  $description = $row['description'];
+                  $careers = $row['careers'];
+                  ?>
+
+            <tr>
+              <td><?php echo $school; ?></td>
+              <td><?php echo $programme; ?></td>
+              <td><?php echo $description; ?></td>
+              <td><?php echo $careers; ?></td>
+
+            </tr>
+          <?php } } }?>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 
   <!-- Footer -->
