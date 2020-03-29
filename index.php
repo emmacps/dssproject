@@ -27,7 +27,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
+      <!-- <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
             <a class="nav-link" href="index.php">Home
@@ -41,7 +41,7 @@
             <a class="nav-link" href="#">Contact</a>
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </nav>
 
@@ -56,7 +56,7 @@
       <!-- /.col-lg-8 -->
       <div class="col-lg-5">
         <h1 class="font-weight-light">Assist In Making The Right Choice.</h1>
-        <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
+        <p> We are building a career guidance system that accepts student’s grade points from their mock exams, hobbies, interest, favorite subjects against SHS cut-off point in decision making for the right SHS to select and to also suggest the right career path for senior high school students. </p>
 
       </div>
       <!-- /.col-md-4 -->
@@ -73,12 +73,11 @@
     <!-- Content Row -->
     <div class="row">
       <div class="col-md-4 mb-5">
-        <div class="card h-100">
+        <div class="h-100">
         <div class="card">
           <img src="img/analysis.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Senior High School's Analytics.</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="analytics.php" class="btn btn-primary">Learn More</a>
           </div>
         </div>
@@ -86,12 +85,11 @@
     </div>
       <!-- /.col-md-4 -->
       <div class="col-md-4 mb-5">
-        <div class="card h-100">
+        <div class="h-100">
           <div class="card">
             <img src="img/placement.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Senior High School's Placement..</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <a href="placement.php" class="btn btn-primary">Learn More</a>
             </div>
           </div>
@@ -101,12 +99,11 @@
 
       <!-- /.col-md-4 -->
       <div class="col-md-4 mb-5">
-        <div class="card h-100">
+        <div class="h-100">
           <div class="card">
             <img src="img/career.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Career Guidance.</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <a href="career.php" class="btn btn-primary">Learn More</a>
             </div>
           </div>

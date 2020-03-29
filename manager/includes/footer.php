@@ -4,7 +4,7 @@
     Developed By ENT.
   </div>
   <!-- Default to the left -->
-  <strong>Copyright &copy; 2019 FWBCI. All Rights Reserved.
+  <strong>Copyright &copy; 2020. Valley View University Project Work.
 </footer>
 
 
