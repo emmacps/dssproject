@@ -87,6 +87,12 @@
                   <input type="text" class="form-control" name="programme" required>
                 </div>
               </div>
+              <div class="form-group">
+                <label for="" class="col-form-label">Hobby</label>
+                <div class="">
+                  <input type="text" class="form-control" name="hobby" required>
+                </div>
+              </div>
               <!-- <p>Select additional best two subjects</p>
               <p>Select first best subject</p>-->
               <!-- <div class="form-group row">
