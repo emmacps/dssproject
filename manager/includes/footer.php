@@ -1,8 +1,5 @@
 <footer class="main-footer">
   <!-- To the right -->
-  <div class="pull-right hidden-xs">
-    Developed By ENT.
-  </div>
   <!-- Default to the left -->
   <strong>Copyright &copy; 2020. Valley View University Project Work.
 </footer>

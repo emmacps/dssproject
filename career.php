@@ -93,31 +93,6 @@
                   <input type="text" class="form-control" name="hobby" required>
                 </div>
               </div>
-              <!-- <p>Select additional best two subjects</p>
-              <p>Select first best subject</p>-->
-              <!-- <div class="form-group row">
-                <select class="form-control col-sm-6" name="subj1" required>
-                  <option value="">Select 1st BestSubject</option>
-                  <option value="French">French</option>
-                  <option value="BDT">BDT</option>
-                  <option value="ICT">ICT</option>
-                </select>
-                <div class="col-sm-6">
-                  <input type="text" class="form-control" name="subj1g" required>
-                </div>
-              </div> -->
-              <!-- <div class="form-group row">
-                <select class="form-control col-sm-6" name="subj2" required>
-                  <option value="">Select 2nd Subject</option>
-                  <option value="French">French</option>
-                  <option value="BDT">BDT</option>
-                  <option value="ICT">ICT</option>
-                </select>
-                <option class="" value=""></option>
-                <div class="col-sm-6">
-                  <input type="text" class="form-control" name="subj2g" required>
-                </div>
-              </div> -->
               <div class="form-group row">
                  <input type="submit" name="career_submit" value="Search" class="btn btn-primary mt-3">
               </div>
