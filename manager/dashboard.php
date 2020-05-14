@@ -46,7 +46,8 @@
     <div class="small-box bg-gray">
       <div class="inner">
         <h4>Careers</h4>
-        <h3><?php echo Career::count_all(); ?></h3>
+        <H3>130</H3>
+        <h3><?php //echo Career::count_all(); ?></h3>
       </div>
       <div class="icon">
         <i class="fa fa-user"></i>
